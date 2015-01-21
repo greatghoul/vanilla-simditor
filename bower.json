@@ -5,8 +5,10 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "simditor": "~2.0.4"
+  }
 }
