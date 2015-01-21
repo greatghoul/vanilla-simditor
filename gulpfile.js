@@ -1,13 +1,13 @@
 var gulp       = require('gulp');
-var clean      = require('gulp-clean');
+var del        = require('del');
 var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
 var minifyCSS  = require('gulp-minify-css');
 var livereload = require('gulp-livereload');
 
-gulp.task('clean', function() {
-  gulp.src('dist')
-    .pipe(clean())
+gulp.task('clean', function (cb) {
+  del.sync('dist');
+  cb();
 });
 
 gulp.task('build', function () {
@@ -20,7 +20,7 @@ gulp.task('build', function () {
   gulp.src(javascripts)
     .pipe(uglify())
     .pipe(concat('vanilla-simditor.min.js'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/js'));
 
   var stylesheets = [
     "bower_components/fontawesome/css/font-awesome.css",
@@ -28,7 +28,10 @@ gulp.task('build', function () {
   gulp.src(stylesheets)
     .pipe(minifyCSS({keepBreaks:true}))
     .pipe(concat('vanilla-simditor.min.css'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/css'));
+
+  gulp.src('bower_components/fontawesome/fonts/*')
+    .pipe(gulp.dest('dist/fonts'))
 
   var files = [
     'default.php',

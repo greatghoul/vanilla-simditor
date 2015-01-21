@@ -16,12 +16,15 @@ class EpicEditorPlugin extends Gdn_Plugin
     {
         // Make sure that Markdown is used
         // $sender->setValue('Format', 'Markdown');
+
         // Remove jQuery Autogrow as it interferes with the editor
-        // Gdn::controller()->removeJsFile('jquery.autogrow.js');
+        // autogrow will always keep textarea present.
+        Gdn::controller()->removeJsFile('jquery.autogrow.js');
+        
         // Add the assets we need for the editor
         Gdn::controller()->addCssFile(
-          $this->getResource('vanilla-simditor.min.css', false, false));
+          $this->getResource('css/vanilla-simditor.min.css', false, false));
         Gdn::controller()->addJsFile(
-          $this->getResource('vanilla-simditor.min.js', false, false));
+          $this->getResource('js/vanilla-simditor.min.js', false, false));
     }
 }

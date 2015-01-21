@@ -3,6 +3,7 @@
   "private": true,
   "devDependencies": {
     "gulp": "*",
+    "del": "*",
     "gulp-concat": "*",
     "gulp-uglify": "*",
     "gulp-clean": "*",
