@@ -12,6 +12,9 @@ gulp.task('clean', function() {
 
 gulp.task('build', function () {
   var javascripts = [
+    'bower_components/simple-module/lib/module.js',
+    'bower_components/simple-hotkeys/lib/hotkeys.js',
+    'bower_components/simple-uploader/lib/uploader.js',
     'bower_components/simditor/lib/simditor.js',
     'initialize.js'];
   gulp.src(javascripts)

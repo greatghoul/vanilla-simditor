@@ -1,3 +1,5 @@
-var editor = new Simditor({
-  textarea: $('.BodyBox')
+$(function() {
+  var editor = new Simditor({
+    textarea: $('.BodyBox')
+  });
 });
