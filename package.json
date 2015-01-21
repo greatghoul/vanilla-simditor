@@ -5,6 +5,8 @@
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-uglify": "*",
-    "gulp-livereload": "*"
+    "gulp-clean": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*"
   }
 }

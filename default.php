@@ -1,3 +1,5 @@
+<?php if ( ! defined( 'APPLICATION' ) ) exit();
+
 // Define the plugin:
 $PluginInfo['Simditor'] = array(
    'Description' => 'an simple online editor - Simditor. https://github.com/mycolorway/simditor',
@@ -17,6 +19,9 @@ class EpicEditorPlugin extends Gdn_Plugin
         // Remove jQuery Autogrow as it interferes with the editor
         // Gdn::controller()->removeJsFile('jquery.autogrow.js');
         // Add the assets we need for the editor
-        Gdn::controller()->addJsFile($this->getResource('js/editor.min.js', false, false));
+        Gdn::controller()->addCssFile(
+          $this->getResource('vanilla-simditor.min.css', false, false));
+        Gdn::controller()->addJsFile(
+          $this->getResource('vanilla-simditor.min.js', false, false));
     }
 }
