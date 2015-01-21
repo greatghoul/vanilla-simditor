@@ -16,6 +16,7 @@ gulp.task('build', function () {
     'bower_components/simple-hotkeys/lib/hotkeys.js',
     'bower_components/simple-uploader/lib/uploader.js',
     'bower_components/simditor/lib/simditor.js',
+    'mobilecheck.js',
     'initialize.js'];
   gulp.src(javascripts)
     .pipe(uglify())
