@@ -1,5 +1,5 @@
 $(function() {
-  var toolbar = ['title', 'bold', 'italic', 'underline','color', 'ol', 'ul', 'blockquote', 'code', 'hr'];
+  var toolbar = ['title', 'bold', 'italic', 'underline','color', 'ol', 'ul', 'blockquote', 'code', 'link', 'hr'];
   var mobileToolbar = ["bold", "underline", "strikethrough", "ul", "ol"];
   if (mobilecheck()) {
     toolbar = mobileToolbar;
