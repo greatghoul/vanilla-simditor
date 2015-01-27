@@ -12,6 +12,9 @@ $(function() {
   });
 
   $(document).on('CommentAdded', function() {
-    editor.setValue('&nbsp;');
+    // Workaground for issue
+    // https://github.com/mycolorway/simditor/issues/179
+    editor.setValue('<p></p>');
+    editor.inputManager.lastCaretPosition = null;
   });
 });
