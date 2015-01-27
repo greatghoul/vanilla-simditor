@@ -11,8 +11,6 @@ $(function() {
     defaultImage: 'http://simditor.tower.im/assets/images/logo.png'
   });
 
-  editor.formatter._allowedAttributes['a'].push('class');
-
   $(document).on('CommentAdded', function() {
     editor.setValue('');
   });
