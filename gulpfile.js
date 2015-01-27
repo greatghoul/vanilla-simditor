@@ -17,15 +17,16 @@ gulp.task('build', function () {
     'bower_components/simple-uploader/lib/uploader.js',
     'bower_components/simditor/lib/simditor.js',
     'mobilecheck.js',
-    'initialize.js'];
+    'default.js'];
   gulp.src(javascripts)
     .pipe(uglify())
     .pipe(concat('vanilla-simditor.min.js'))
     .pipe(gulp.dest('dist/js'));
 
   var stylesheets = [
-    "bower_components/fontawesome/css/font-awesome.css",
-    "bower_components/simditor/styles/simditor.css"];
+    'bower_components/fontawesome/css/font-awesome.css',
+    'bower_components/simditor/styles/simditor.css',
+    'default.css'];
   gulp.src(stylesheets)
     .pipe(minifyCSS({keepBreaks:true}))
     .pipe(concat('vanilla-simditor.min.css'))
