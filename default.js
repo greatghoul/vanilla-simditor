@@ -12,6 +12,6 @@ $(function() {
   });
 
   $(document).on('CommentAdded', function() {
-    editor.setValue('');
+    editor.setValue('<p></p>');
   });
 });
