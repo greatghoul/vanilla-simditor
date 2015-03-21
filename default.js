@@ -11,7 +11,7 @@ $(function() {
     defaultImage: 'http://simditor.tower.im/assets/images/logo.png'
   });
 
-  $(document).on('CommentAdded', function() {
+  $(document).on('CommentAdded clearCommentForm', function() {
     // Workaground for issue
     // https://github.com/mycolorway/simditor/issues/179
     editor.setValue('<p></p>');
